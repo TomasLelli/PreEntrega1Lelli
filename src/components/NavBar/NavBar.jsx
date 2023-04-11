@@ -3,22 +3,23 @@ import CartWidget from "../CartWidget/CartWidget";
 
 //CSS
 import './lista.css'
+import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
     <div>
-      <nav class="navbar bg-body-tertiary">
-        <div class="container-fluid">
-          <h1 class="navbar-brand">MateandoVoy</h1>
-          <ul className="lista">
-            <li><a class="dropdown-item" href="#">Mates</a></li>
-            <li><a class="dropdown-item" href="#">Bombillas</a></li>
-            <li><a class="dropdown-item" href="#">Termos</a></li>
+      <nav className="navbar bg-body-tertiary">
+        <div className="container-fluid">
+          <h1 className="navbar-brand"><Link classNameName="dropdown-item" to='/'>Home</Link></h1>
+          <ul classNameName="lista">
+            <li><Link classNameName="dropdown-item" to='/category/mates'>Mates</Link></li>
+            <li><Link classNameName="dropdown-item" to='/category/bombillas'>Bombillas</Link></li>
+            <li><Link classNameName="dropdown-item" to='/category/termos'>Termos</Link></li>
             <CartWidget />
           </ul>
-          <form class="d-flex" role="search">
-            <input className="form-control m-2" placeholder="Mates, Bombillas, Termos" />
-            <button class="btn btn-outline-success m-2" type="submit">
+          <form className="d-flex" role="search">
+            <input classNameName="form-control m-2" placeholder="Mates, Bombillas, Termos" />
+            <button className="btn btn-outline-success m-2" type="submit">
               Buscar
             </button>
           </form>

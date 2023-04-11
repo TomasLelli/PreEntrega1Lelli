@@ -8,6 +8,8 @@ import '../css/bootstrap.min.css'
 //Components
 import NavBar from './components/navbar/navbar'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import { Route, Routes } from 'react-router-dom'
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 
 function App() {
   
@@ -15,7 +17,11 @@ function App() {
   return (
     <div>
       <NavBar />
-      <ItemListContainer greeting="Bienvenidos!" />
+      <Routes>
+        <Route path='/' element={ <ItemListContainer /> }/>
+        <Route path='/category/:id' element={ <ItemListContainer /> } />
+        <Route path='/detalle' element={ <ItemDetailContainer /> } />
+      </Routes>
     </div>
   )
 }
