@@ -7,7 +7,7 @@ function ItemListContainer(props) {
 
   return (
     <div className='titulo'>
-        <h1 className='titulo'>{props.greeting}</h1>
+        <h1 className='titulo2'>{props.greeting}</h1>
     </div>
   )
 }
