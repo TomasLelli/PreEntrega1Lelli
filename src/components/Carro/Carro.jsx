@@ -34,12 +34,8 @@ function Carro() {
   });
 
   clearCart();
-  swal("Compra finalizada con exito").then(okay => {
-    if (okay) {
-     window.location.href = "/";
-   };
- });
- }
+  swal("Compra finalizada con exito");
+ };
  if (cart.length === 0) {
   return (
    <>
